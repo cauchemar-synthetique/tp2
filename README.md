@@ -5,7 +5,7 @@
 ```
 $ sudo nano /etc/sysconfig/network-scripts/ifcfg-enp0s8
 NOM=enp0s8
-APPAREIL=enp0s8
+DEVICE=enp0s8
 
 BOOTPROTO=statique
 ONBOOT=oui
@@ -28,7 +28,7 @@ $ip un
     inet6 fe80 :: a00: 27ff: fe22: de5b/64 lien de portée
        valid_lft pour toujours préféré_lft pour toujours
 ```
-**Sur le fichier actif Forwarding IPv4**
+** le fichier Forwarding IPv4**
 ```
 $ sudo sysctl -w net.ipv4.ip_forward=1
 net.ipv4.ip_forward = 1
@@ -43,7 +43,7 @@ succès
 ```
 $ sudo nano /etc/sysconfig/network-scripts/ifcfg-enp0s3
 NOM=enp0s3
-APPAREIL=enp0s3
+DEVICE=enp0s3
 
 BOOTPROTO=statique
 ONBOOT=oui
@@ -70,7 +70,7 @@ $ping 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) octets de données.
 64 octets de 8.8.8.8 : icmp_seq=1 ttl=113 time=31,3 ms
 ```
-**Les paquets passent bien par le Router :**
+**Les paquets passent bien par le Routeur :**
 ```
 $ traceroute 8.8.8.8
 traceroute vers 8.8.8.8 (8.8.8.8), 30 sauts maximum, paquets de 60 octets
@@ -93,7 +93,7 @@ traceroute vers 8.8.8.8 (8.8.8.8), 30 sauts maximum, paquets de 60 octets
 ```
 $ sudo nano /etc/sysconfig/network-scripts/ifcfg-enp0s3
 NOM=enp0s3
-APPAREIL=enp0s3
+DEVICE=enp0s3
 
 BOOTPROTO=statique
 ONBOOT=oui
@@ -134,7 +134,7 @@ option masque de sous-réseau 255.255.255.0 ;
 ```
 $ sudo nano /etc/sysconfig/network-scripts/ifcfg-enp0s3
 NOM=enp0s3
-APPAREIL=enp0s3
+DEVICE=enp0s3
 
 BOOTPROTO=DHCP
 ONBOOT=oui
